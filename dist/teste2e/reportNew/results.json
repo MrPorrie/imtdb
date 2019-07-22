@@ -1,0 +1,362 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "login",
+    "line": 2,
+    "id": "login",
+    "tags": [
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "uri": "teste2e\\features\\icm2\\imtdb_002.0_login.feature",
+    "elements": [
+      {
+        "id": "login;go-to-the-begin-page-and-check-the-imtdb-logo",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Go to the begin page and check the imtdb logo",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "Wait for Angular enabled is false",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\browser.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to the begin page",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\browser.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1339000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "The element with the css \".logo\" becomes visible",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\expect.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;go-to-the-login-page",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Go to the login page",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I click the \"[href='/login']\" selector",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\button.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;check-the-header-and-page-elements",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Check the header and page elements",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "The element with the css \"[href='/signup']\" becomes visible",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\expect.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;check-the-header-and-page-elements",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Check the header and page elements",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "The element with the css \"[href='/login']\" becomes visible",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\expect.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;check-the-header-and-page-elements",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Check the header and page elements",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "The element with the css \".header__title\" becomes visible",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\expect.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;check-the-header-and-page-elements",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Check the header and page elements",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "The element with the css \".login\" becomes visible",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\expect.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;login-with-wrong-credentials",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Login with wrong credentials",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I fill in incorrect credentials",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\login.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 250000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click the \"#app > div > section > button\" selector",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\button.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;login-with-the-correct-credentials",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Login with the correct credentials",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "I fill in my crendentials - by arguments",
+            "match": {
+              "location": "teste2e\\features\\step_definitions\\login.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 194000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
