@@ -53,7 +53,7 @@ $ npm chai-as-promised
 ## File layout
 
 It's always useful to have a clear file layout.
-A standard layout is made in the map "teste2e":
+A standard layout is made in the map "teste2e":  
 	- features  
 	- page objects  
 	- Step definitions  
@@ -79,7 +79,8 @@ $ protractor conf.js
 
 
 ## Grunt
-.... in progress .... The JavaScript Task Runner, run tests with a single command.
+.... in progress .... The JavaScript Task Runner, run tests with a single command.  
+This project can run with Grunt.
 
 
 ## Output
@@ -105,3 +106,8 @@ Scenario: Button Click
 ```
 ## Multiple cucumber report
 .... in progress ....
+
+
+## API test
+
+The postman collection with the enviroment variables can be found in the map "testAPI"
