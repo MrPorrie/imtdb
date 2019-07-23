@@ -62,25 +62,22 @@ The map "node_modules" should already be visible after installing al the modules
 Also the package.json should already be generated.
 
 
-## Run e2e
-
-First always update the webdriver manager and then start it:
-```
-webdriver-manager update && webdriver-manager start
-```
-$ Run in another CMD protractor:
-```
-protractor <path to the configuration file>
-```  
-Or, if you are already in the correct map then you can just run the command:
-```
-$ protractor conf.js
-```	
-
-
 ## Grunt
-.... in progress .... The JavaScript Task Runner, run tests with a single command.  
-This project can run with Grunt.
+Grunt is a JavaScript task runner. It makes it possible to run tests with a single command.  
+This project can run with Grunt with the following configuration:
+
+Configure the grunt runner with the task:
+```
+e2e-test-local
+```
+
+Specify the following arguments:
+```
+--baseUrl http://localhost/  
+--tags=@login  
+--testUser pim  
+--testPass mip
+```
 
 
 ## Output
@@ -112,3 +109,7 @@ Scenario: Button Click
 
 The postman collection with the enviroment variables can be found in the map "testAPI".  
 The tests can be run with Newman, see the RunWithNewman.bat for an example.
+Install Newman:
+```
+$ npm install -g newman
+```
