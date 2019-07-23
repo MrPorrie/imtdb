@@ -110,7 +110,7 @@ The report can be found in the map:
 ```
 dist/teste2e/reportNew/report
 ```
-Open the file index in your browser.
+Open the file "index" in your browser.
 
 ## API test
 
