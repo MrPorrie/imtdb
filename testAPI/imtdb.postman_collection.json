@@ -1,0 +1,1966 @@
+{
+	"info": {
+		"_postman_id": "6e0617ca-9744-4cb9-87ac-161bb4ae5d42",
+		"name": "imtdb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Backend Api",
+			"item": [
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "Users",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "Get Single User",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "1d73dfcf-832b-4b5f-a180-09acffd4438a",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}{{users}}/api/Users/:id",
+													"host": [
+														"{{baseUrl}}{{users}}"
+													],
+													"path": [
+														"api",
+														"Users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/Users/<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Users",
+																"<integer>"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Update",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "6a583655-4f68-400e-861b-9b8b2548e7e2",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"active\": \"true\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}{{users}}/api/Users/:id",
+													"host": [
+														"{{baseUrl}}{{users}}"
+													],
+													"path": [
+														"api",
+														"Users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<integer>",
+															"description": {
+																"content": "",
+																"type": "text/plain"
+															}
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"active\": \"<boolean>\"\n}"
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/Users/<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Users",
+																"<integer>"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Delete",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "782cfec5-c0e2-4f1d-a688-e946e30a7edc",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}{{users}}/api/Users/:id?id=3",
+													"host": [
+														"{{baseUrl}}{{users}}"
+													],
+													"path": [
+														"api",
+														"Users",
+														":id"
+													],
+													"query": [
+														{
+															"key": "id",
+															"value": "3"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "3"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/Users/<integer>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Users",
+																"<integer>"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Get",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "d0906e67-99f0-4d51-8a21-fdad146c5b3c",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}{{users}}/api/Users",
+											"host": [
+												"{{baseUrl}}{{users}}"
+											],
+											"path": [
+												"api",
+												"Users"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Users",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Users"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Create",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "57439392-9192-4f9f-9991-3a6cb9792244",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userName\": \"crudtest\",\n    \"role\": \"admin\",\n    \"passWord\": \"crudpass\",\n    \"active\": \"true\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}{{users}}/api/Users",
+											"host": [
+												"{{baseUrl}}{{users}}"
+											],
+											"path": [
+												"api",
+												"Users"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"userName\": \"<string>\",\n    \"role\": \"<string>\",\n    \"passWord\": \"<string>\",\n    \"active\": \"<boolean>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Users",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Users"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Check",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0f12c01a-4976-4536-b49e-de80acd34bf7",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\": \"crudtest\",\n    \"passWord\": \"crudpass\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}{{users}}/api/Validation",
+									"host": [
+										"{{baseUrl}}{{users}}"
+									],
+									"path": [
+										"api",
+										"Validation"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"userName\": \"<string>\",\n    \"passWord\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Validation",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Validation"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Python Movie BackEnd",
+			"item": [
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "movies",
+							"item": [
+								{
+									"name": "Endpoint to get information about movies",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f9d671d3-547b-415a-8dae-1fc7b18fe037",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}{{movie}}/api/movies",
+											"host": [
+												"{{baseUrl}}{{movie}}"
+											],
+											"path": [
+												"api",
+												"movies"
+											]
+										},
+										"description": "If no query param is given all movies will be returned<br/>When using a query param that movie will be searched"
+									},
+									"response": [
+										{
+											"name": "Incorrect data used",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/movies?search=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"movies"
+													],
+													"query": [
+														{
+															"key": "search",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Your movie query is correct",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/movies?search=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"movies"
+													],
+													"query": [
+														{
+															"key": "search",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Endpoint to post a new movie",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "302dcd98-7122-4fe3-8ded-d21d24016458",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"imdb\": \"testpim\",\n    \"title\": \"hoi\",\n    \"type\": \"movie\",\n    \"year\": \"2019\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}{{movie}}/api/movies",
+											"host": [
+												"{{baseUrl}}{{movie}}"
+											],
+											"path": [
+												"api",
+												"movies"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Incorrect data used",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"imdb\": \"<string>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\",\n    \"year\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/movies",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"movies"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Your movie query is correct",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"imdb\": \"<string>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\",\n    \"year\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/movies",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"movies"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Endpoint to get information about a specific movie",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9736c48-d675-498f-a9d2-5c9ffaf82b7d",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}{{movie}}/api/movies/:id",
+											"host": [
+												"{{baseUrl}}{{movie}}"
+											],
+											"path": [
+												"api",
+												"movies",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "tt0064116",
+													"description": "specific movie you want to query"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Your movie query is correct",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/movies/<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"movies",
+														"<string>"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Incorrect data used",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/movies/<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"movies",
+														"<string>"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Flask Proxy Api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "proxy",
+							"item": [
+								{
+									"name": "movies",
+									"item": [
+										{
+											"name": "Protected content method.",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/movies/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"movies",
+														""
+													]
+												},
+												"description": "Protected content method. Can not be seen without valid token."
+											},
+											"response": [
+												{
+													"name": "User successfully accessed the content.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/movies/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"movies",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Endpoint to post a new movie",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"imdb\": \"<string>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\",\n    \"year\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/movies/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"movies",
+														""
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Your movie query is correct",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															},
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"imdb\": \"<string>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\",\n    \"year\": \"<string>\"\n}"
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/movies/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"movies",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Incorrect data used",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															},
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"imdb\": \"<string>\",\n    \"title\": \"<string>\",\n    \"type\": \"<string>\",\n    \"year\": \"<string>\"\n}"
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/movies/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"movies",
+																""
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Protected content method.",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/movies/admin",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"movies",
+														"admin"
+													]
+												},
+												"description": "Protected content method. Can not be seen without valid token."
+											},
+											"response": [
+												{
+													"name": "User successfully accessed the content.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/movies/admin",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"movies",
+																"admin"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Protected content method.",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/movies/searches?query=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"movies",
+														"searches"
+													],
+													"query": [
+														{
+															"key": "query",
+															"value": "<string>",
+															"description": "specific movie you want to query"
+														}
+													]
+												},
+												"description": "Protected content method. Can not be seen without valid token."
+											},
+											"response": [
+												{
+													"name": "User successfully accessed the content.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/movies/searches?query=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"movies",
+																"searches"
+															],
+															"query": [
+																{
+																	"key": "query",
+																	"value": "<string>"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Protected content method.",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/movies/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"movies",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "<string>",
+															"description": "specific movie you want to query"
+														}
+													]
+												},
+												"description": "Protected content method. Can not be seen without valid token."
+											},
+											"response": [
+												{
+													"name": "User successfully accessed the content.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/movies/<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"movies",
+																"<string>"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "tokens",
+									"item": [
+										{
+											"name": "Endpoint to showcase token usage",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/tokens/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"tokens",
+														""
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Your token has been validated",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/tokens/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"tokens",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Endpoint to get a token",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": \"<number>\",\n    \"password\": \"<string>\",\n    \"username\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/tokens/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"tokens",
+														""
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Your token has been created",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"id\": \"<number>\",\n    \"password\": \"<string>\",\n    \"username\": \"<string>\"\n}"
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/tokens/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"tokens",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "User was not found",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"id\": \"<number>\",\n    \"password\": \"<string>\",\n    \"username\": \"<string>\"\n}"
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/tokens/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"tokens",
+																""
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Protected content method.",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/tokens/admin",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"tokens",
+														"admin"
+													]
+												},
+												"description": "Protected content method. Can not be seen without valid token."
+											},
+											"response": [
+												{
+													"name": "User successfully accessed the content.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/tokens/admin",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"tokens",
+																"admin"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "users",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "Delete a user in the backend",
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/users/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"users",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<string>",
+																	"description": "user to delete"
+																}
+															]
+														},
+														"description": "Protected content method. Can not be seen without valid token. Only admins can delete users"
+													},
+													"response": [
+														{
+															"name": "User successfully accessed the content.",
+															"originalRequest": {
+																"method": "DELETE",
+																"header": [
+																	{
+																		"key": "Authorization",
+																		"value": ""
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/v1/proxy/users/<string>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"v1",
+																		"proxy",
+																		"users",
+																		"<string>"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "Update a user in the backend",
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															},
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"active\": \"<boolean>\"\n}"
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/users/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"users",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<string>",
+																	"description": "user to update"
+																}
+															]
+														},
+														"description": "Protected content method. Can not be seen without valid token. Only admins can update users"
+													},
+													"response": [
+														{
+															"name": "User was updated",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [
+																	{
+																		"key": "Authorization",
+																		"value": ""
+																	},
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n    \"active\": \"<boolean>\"\n}"
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/v1/proxy/users/<string>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"v1",
+																		"proxy",
+																		"users",
+																		"<string>"
+																	]
+																}
+															},
+															"status": "No Content",
+															"code": 204,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											],
+											"_postman_isSubFolder": true
+										},
+										{
+											"name": "Show all users from the backend.",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": ""
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/users/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"users",
+														""
+													]
+												},
+												"description": "Protected content method. Can not be seen unless you are an admin."
+											},
+											"response": [
+												{
+													"name": "User successfully accessed the content.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/users/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"users",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Create a new user in the backend",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"password\": \"<string>\",\n    \"username\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/users/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"users",
+														""
+													]
+												},
+												"description": "Protected content method. Can not be seen without valid token. Only admins can create admins"
+											},
+											"response": [
+												{
+													"name": "User successfully accessed the content.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"password\": \"<string>\",\n    \"username\": \"<string>\"\n}"
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/users/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"users",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Create a new admin in the backend",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": ""
+													},
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"password\": \"<string>\",\n    \"username\": \"<string>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/users/admins",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"users",
+														"admins"
+													]
+												},
+												"description": "Protected content method. Can not be seen without valid token. Only admins can create admins"
+											},
+											"response": [
+												{
+													"name": "User successfully accessed the content.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": ""
+															},
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"password\": \"<string>\",\n    \"username\": \"<string>\"\n}"
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/users/admins",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"users",
+																"admins"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Get a userid in the backend",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/proxy/users/:username",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"proxy",
+														"users",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username",
+															"value": "<string>",
+															"description": "user you want to query"
+														}
+													]
+												},
+												"description": "Query a user based on username"
+											},
+											"response": [
+												{
+													"name": "User successfully accessed the content.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/v1/proxy/users/<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"proxy",
+																"users",
+																"<string>"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
