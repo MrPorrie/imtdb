@@ -102,8 +102,15 @@ Scenario: Button Click
 
 
 ## Multiple cucumber report
-.... in progress ....
-
+A reporter is configured and can be installed with:
+```
+npm install protractor-multiple-cucumber-html-reporter-plugin --save-dev
+```
+The report can be found in the map:
+```
+dist/teste2e/reportNew/report
+```
+Open the file index in your browser.
 
 ## API test
 
