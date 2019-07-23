@@ -103,11 +103,12 @@ Scenario: Button Click
 0m00.709s
 ```
 
-```
+
 ## Multiple cucumber report
 .... in progress ....
 
 
 ## API test
 
-The postman collection with the enviroment variables can be found in the map "testAPI"
+The postman collection with the enviroment variables can be found in the map "testAPI".  
+The tests can be run with Newman, see the RunWithNewman.bat for an example.
